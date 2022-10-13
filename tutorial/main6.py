@@ -15,7 +15,7 @@ for i in range(1, 5):
 print("akhir dari program\n")
 
 # menggunakan string
-huruf = "saya_suka_makan"
+huruf = "saya suka makan"
 for i in huruf:
     print("i sekarang --> ", i)
 print("akhir dari program\n")
