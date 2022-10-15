@@ -29,7 +29,9 @@ data = ['ucup', 1, 3, 5, 'otong']
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 kuadrat = [i**2 for i in numbers]
+[print(f'{i**2}') for i in numbers]
 print(f'kuadrat = {kuadrat}')
 
-for index, data in enumerate(data):
-    print(f'index = {index}, data = {data}')
+# list with enumerate
+for index, item in enumerate(data):
+    print(f'index = {index}, data = {item}')
