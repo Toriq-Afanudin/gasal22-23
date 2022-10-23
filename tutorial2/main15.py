@@ -28,4 +28,4 @@ for i in range(len(list_3)):
     if keberadaan_data == 0:
         list_4.append(data_sementara)
 print(
-    f"Daftar Bilangan Triple Pythagora [a, b, c] dengan a, b kurang dari samadengan {inputan}:\n{list_4}")
+    f"Daftar Bilangan Triple Pythagoras [a, b, c] dengan a, b kurang dari samadengan {inputan}:\n{list_4}")
