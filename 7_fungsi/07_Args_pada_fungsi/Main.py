@@ -38,3 +38,12 @@ def tambah(*data):
 
 
 tambah(1, 2, 3, 4, 5, 6, 7, 8, 9, 5, 6, 7, 4, 3)
+tambah(2, 4, 3, 5, 3, 2, 1, 2, 3, 2, 3, 2, 3, 2,
+       2, 1, 2, 3, 6, 5, 3, 2, 3, 4, 5, 3, 2, 2)
+masukan = list(input("Masukan : "))
+data_int = []
+for i in masukan:
+    data = int(i)
+    data_int.append(data)
+print(data_int)
+tambah(data_int)
