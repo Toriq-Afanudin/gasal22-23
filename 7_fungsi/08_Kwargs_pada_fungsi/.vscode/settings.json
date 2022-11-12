@@ -1,0 +1,9 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.fontSize":20,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 20,
+    "workbench.colorTheme": "Noctis",
+    "workbench.iconTheme": "vscode-icons",
+    "python.formatting.provider": "black"
+}
