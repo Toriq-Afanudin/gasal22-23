@@ -5,12 +5,14 @@ class Hero:
         self.attackPower = attackPower
         self.armorNumber = armorNumber
 
-    def serang(self, lawan):
-        print(self.name + " menyerang " + lawan.name)
-        lawan.diserang(self, self.attackPower)
+    def serang(self, lawan):  # Method menyerang
+        print(f"{self.name} menyerang {lawan.name}")
+        lawan.diserang(
+            self, self.attackPower
+        )  # Saat menyerang, lawan otomatis diserang
 
-    def diserang(self, lawan, attackPowerLawan):
-        print(self.name + " diserang " + lawan.name)
+    def diserang(self, lawan, attackPowerLawan):  # Method diserang
+        print(f"{self.name} diserang {lawan.name}")
         attackDiterima = attackPowerLawan / self.armorNumber
         self.health -= attackDiterima
         print(f"attack power lawan = {attackPowerLawan}")
@@ -18,10 +20,10 @@ class Hero:
         print(f"darah {self.name} tersisa = {self.health}")
 
 
-sniper = Hero("sniper", 100, 10, 5)
+sniper = Hero("sniper", 100, 10, 5)  # Membuat Hero baru
 nikimaru = Hero("nikimaru", 120, 7, 8)
 
-sniper.serang(nikimaru)
+sniper.serang(nikimaru)  # Sniper menyerang nikimaru
 print("\n")
 nikimaru.serang(sniper)
 print("\n")
