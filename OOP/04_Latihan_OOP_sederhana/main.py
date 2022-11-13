@@ -1,17 +1,17 @@
 class Hero:
-    def __init__(self, name, health, attackPower, armorNumber):
+    def __init__(self, name: str, health: int, attackPower: int, armorNumber: int):
         self.name = name
         self.health = health
         self.attackPower = attackPower
         self.armorNumber = armorNumber
 
-    def serang(self, lawan):  # Method menyerang
+    def serang(self, lawan):  # Method menyerang # Lawan: object
         print(f"{self.name} menyerang {lawan.name}")
         lawan.diserang(
             self, self.attackPower
         )  # Saat menyerang, lawan otomatis diserang
 
-    def diserang(self, lawan, attackPowerLawan):  # Method diserang
+    def diserang(self, lawan, attackPowerLawan: int):  # Method diserang
         print(f"{self.name} diserang {lawan.name}")
         attackDiterima = attackPowerLawan / self.armorNumber
         self.health -= attackDiterima
