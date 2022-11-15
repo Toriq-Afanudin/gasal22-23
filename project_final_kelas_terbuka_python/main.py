@@ -2,8 +2,14 @@ import os
 import CRUD as CRUD
 
 if __name__ == "__main__":
+    os.system("cls")
+
+    print("SELAMAT DATANG DI PROGRAM")
+    print("DATABASE PERPUSTAKAAN")
+    print("=========================")
 
     # Check database itu ada atau tidak
+    CRUD.init_console()
 
     while True:
         # Membersihkan cmd saat program dijalankan
@@ -19,12 +25,11 @@ if __name__ == "__main__":
         print("4. Delete Data")
 
         user_option = input("Masukan opsi: ")
-        print("\n=========================\n")
 
         # CRUD.init_console()
 
         if user_option == "1":
-            print("Read Data")
+            CRUD.read_console()
         elif user_option == "2":
             print("Create Data")
         elif user_option == "3":
@@ -34,7 +39,6 @@ if __name__ == "__main__":
         else:
             print("Opsi tidak ditemukan")
 
-        print("\n=========================\n")
         is_done = input("Apakah program selesai (y/n)? ")
         if is_done == "y":
             break
