@@ -31,7 +31,7 @@ if __name__ == "__main__":
         if user_option == "1":
             CRUD.read_console()
         elif user_option == "2":
-            print("Create Data")
+            CRUD.create_console()
         elif user_option == "3":
             print("Update Data")
         elif user_option == "4":
@@ -41,4 +41,5 @@ if __name__ == "__main__":
 
         is_done = input("Apakah program selesai (y/n)? ")
         if is_done == "y":
+            print("program selesai, terimakasih kakakkk")
             break
