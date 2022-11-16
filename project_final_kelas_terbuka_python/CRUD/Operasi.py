@@ -1,5 +1,23 @@
 from . import Database
 from . import Util
+from . import View
+
+
+def update(nomer_data, pk, date_add, penulis, judul, tahun):
+    data = Database.TEMPLATE.copy()
+    data["pk"] = pk
+    data["date_add"] = date_add
+    data["penulis"] = penulis + Database.TEMPLATE["penulis"][len(penulis) :]
+    data["judul"] = judul + Database.TEMPLATE["judul"][len(judul) :]
+    data["tahun"] = str(tahun)
+    data_str = f"{data['pk']},{data['date_add']},{data['penulis']},{data['judul']},{data['tahun']}\n"
+    try:
+        with open(Database.DB_NAME, "r+", encoding="utf-8") as file:
+            file.seek(550 * (nomer_data - 1))
+            file.write(data_str)
+        View.read_console()
+    except:
+        print("error")
 
 
 def create(tahun, judul, penulis):
@@ -52,11 +70,6 @@ def create_firts_data():
 
 
 def read():
-    try:
-        with open(Database.DB_NAME, "r") as file:
-            content = file.readlines()
-            return content
-    except:
-        print("gagal membaca data")
-        list_kosong = []
-        return list_kosong
+    with open(Database.DB_NAME, "r") as file:
+        content = file.readlines()
+        return content

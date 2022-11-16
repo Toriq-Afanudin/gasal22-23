@@ -33,7 +33,7 @@ if __name__ == "__main__":
         elif user_option == "2":
             CRUD.create_console()
         elif user_option == "3":
-            print("Update Data")
+            CRUD.update_console()
         elif user_option == "4":
             print("Delete Data")
         else:

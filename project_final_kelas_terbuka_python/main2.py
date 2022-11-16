@@ -1,0 +1,5 @@
+data = "ALkGEs,2022-11-16-01-57-14+0700,Afanudin                                                                                                                                                                                                                                                       ,Merangkai kata dengan coding                                                                                                                                                                                                                                   ,2017"
+data2 = "ALkGEs,2022-11-16-01-57-14+0700,Afanudin                                                                                                                                                                                                                                                       ,Merangkai kata dengan coding                                                                                                                                                                                                                                   ,2017\n"
+
+print(len(data))
+print(len(data2))
