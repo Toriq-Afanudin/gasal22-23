@@ -1,5 +1,17 @@
-data = "ALkGEs,2022-11-16-01-57-14+0700,Afanudin                                                                                                                                                                                                                                                       ,Merangkai kata dengan coding                                                                                                                                                                                                                                   ,2017"
-data2 = "ALkGEs,2022-11-16-01-57-14+0700,Afanudin                                                                                                                                                                                                                                                       ,Merangkai kata dengan coding                                                                                                                                                                                                                                   ,2017\n"
+batas = int(input("masukan angka: "))
 
-print(len(data))
-print(len(data2))
+
+def faktorial(batas):
+    print(f"{batas}!=", end="")
+    hasil = 1
+    for i in range(batas):
+        if batas == 1:
+            print(batas, end="")
+            break
+        print(batas, "x ", end="")
+        hasil *= batas
+        batas -= 1
+    print("=", hasil)
+
+
+faktorial(batas)

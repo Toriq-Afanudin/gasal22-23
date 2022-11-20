@@ -35,7 +35,7 @@ if __name__ == "__main__":
         elif user_option == "3":
             CRUD.update_console()
         elif user_option == "4":
-            print("Delete Data")
+            CRUD.delete_console()
         else:
             print("Opsi tidak ditemukan")
 

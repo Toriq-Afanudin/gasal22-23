@@ -1,6 +1,19 @@
 from . import Operasi
 
 
+def delete_console():
+    data_file = Operasi.read()
+    read_console()
+    while True:
+        nomer_data = int(input("Masukan nomer data yang akan anda hapus: "))
+        panjang_data = len(data_file)
+        if nomer_data < 1 or nomer_data > panjang_data:
+            print("nomer yang anda masukan tidak ditemukan, silakan masukan ulang")
+        else:
+            break
+    Operasi.delete(nomer_data - 1)
+
+
 def update_console():
     data_file = Operasi.read()
     read_console()
